@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+		<title>index30</title>
+	</head>
+	<body>
+		<script>
+		    do{
+			   var x = parseFloat(prompt('Введите число x: ').replace(/,/g, '.'));
+			   if (isNaN(x)) alert('Недопустимое значение! Попробуйте ввести другое число x:');
+			  } while (isNaN(x));			  
+			do{
+			   var y = parseFloat(prompt('Введите число y: ').replace(/,/g, '.'));
+			   if (isNaN(y)) alert('Недопустимое значение! Попробуйте ввести другое число y:');
+			  } while (isNaN(y));			  
+			var result = Math.pow(x, y);
+			switch(isNaN(result) || result){
+											case true : alert('Ввозвести введёное Вами число в данную степень нельзя! Получено комплексное число - смотри Википедию...)'); break;
+											case Infinity : alert('Ноль нельзя возвести в отрицательную спепень:('); break;
+											default : alert('Число ' +x+ ' в степени ' +y+ ' равно ' +result);
+										   }
+		</script>
+	</body>
+</html>
