@@ -6,35 +6,34 @@
 </head>
 
 <body>
-    <script>
-        var color = window.prompt("Введите цвет");
-        if (color == "белый" || color == "красный") {
-            var skirt = window.prompt("А юбка есть?");
-            switch (color) {
-                case "белый":
-                    switch (skirt) {
-                        case "нет":
-                            alert("Вы нашли белый гриб!");
-                            break;
-                        default:
-                            alert("Даже и не знаю, что это... С грибами надо быть внимательными! Попробуйте в следующий раз ввести 'нет'!");
-                    }
-                    break;
-                case "красный":
-                    switch (skirt) {
-                        case "да":
-                            alert("А не мухомор ли это??");
-                            break;
-                        case "нет":
-                            alert("Может это подосиновик");
-                            break;
-                        default:
-                            alert("Введите 'да' либо 'нет!");
-                    }
-                    break;
-            }
-        } else alert("Вы уверены, что такой цвет действительно существует? С грибами надо быть внимательными!");
-    </script>
+	  <script>
+			do{
+			var colour = window.prompt('Введите цвет гриба (белый/желтый/красный/коричневый)','').toLowerCase();
+				if (colour != 'белый' && colour != 'желтый' && colour != 'красный' && colour != 'коричневый')
+					alert('Введен недопустимый цвет гриба. Введите белый, желтый, красный либо коричневый!');
+				else
+					break;
+			}
+			while (true)
+			var skirt = confirm('А юбка есть? (ОК - да/ Отмена - нет)');
+			switch(colour)
+			{
+			case 'белый':
+				if (skirt == false)
+					alert('Вы нашли белый гриб!');
+				else
+					alert('С грибами надо быть внимательными!');
+				break;
+			case 'красный':
+				if (skirt == true)
+					alert('А не мухомор ли это?');
+				else
+					alert('Может это подосиновик?');
+				break;
+			default:
+				alert('С грибами надо быть внимательными!');
+			}
+	   </script>
 </body>
 
 </html>
